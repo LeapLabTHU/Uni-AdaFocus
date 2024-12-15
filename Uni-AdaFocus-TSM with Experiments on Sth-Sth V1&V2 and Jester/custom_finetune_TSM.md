@@ -26,7 +26,8 @@ PATH_TO_YOUR_DATASET/
 ```
 2. Format annotations
 
-* classInd.txt: class name index file, one line for each class, similar to that of [actnet](https://drive.google.com/drive/folders/1bY0Cdrl72PdbC_5aHXtfqYunNzs_45Cq).
+Make sure the format of "classInd.txt", "train_split.txt", "val_split.txt" be similar to that of [actnet](https://drive.google.com/drive/folders/1bY0Cdrl72PdbC_5aHXtfqYunNzs_45Cq).
+* classInd.txt: class name index file, one line for each class.
 * train_split.txt: train set labels, `<video_name>,<num_frames>,<class_id>`
 * val_split.txt: valid set labels, `<video_name>,<num_frames>,<class_id>`
 
@@ -43,11 +44,11 @@ python ops/video_jpg.py PATH_TO_YOUR_DATASET/videos PATH_TO_YOUR_DATASET/frames 
 1. Add your own dataset config in [ops/dataset_config.py](ops/dataset_config.py): (replace YOUR_DATA with your own dataset name)
 ```
 def return_YOUR_DATA(modality):
-    filename_categories = ospj(ROOT_DATASET, 'classInd.txt')
+    filename_categories = os.path.join(ROOT_DATASET, 'classInd.txt')
     if modality == 'RGB':
-        root_data = ospj(ROOT_DATASET, 'frames')
-        filename_imglist_train = ospj(ROOT_DATASET, 'train_split.txt')
-        filename_imglist_val = ospj(ROOT_DATASET, 'val_split.txt')
+        root_data = os.path.join(ROOT_DATASET, 'frames')
+        filename_imglist_train = os.path.join(ROOT_DATASET, 'train_split.txt')
+        filename_imglist_val = os.path.join(ROOT_DATASET, 'val_split.txt')
         prefix = 'image_{:05d}.jpg'
     else:
         print('no such modality:' + modality)
@@ -68,14 +69,14 @@ dict_single = {'jester': return_jester, 'something': return_something, 'somethin
 
 ## Start training
 
-Run following command to train Uni-AdaFocus on train split of your dataset.
+Run the following command to train Uni-AdaFocus on the train split of your dataset.
 
 * YOUR_DATA: your dataset name, same to above
-* LOG_DIR: path to the directory for saving exp results
+* LOG_DIR: path to the directory for saving experimental results
 * --patch_size: local patch size (96, 128)
-* --num_glance_segments: number of global frames
-* --num_focus_segments: number of local frames
-* --num_input_focus_segments: number of local frame candidates, recommended to be 3*num_focus_segments
+* --num_glance_segments: number of the global frames
+* --num_focus_segments: number of the local frames
+* --num_input_focus_segments: number of the local frame candidates, recommended to be 3*num_focus_segments
 
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py YOUR_DATA RGB \
@@ -92,9 +93,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py YOUR_DATA RGB \
 
 ## Start evaluating
 
-Run following command to evaluate Uni-AdaFocus on valid split of your dataset.
-* add --evaluate to turn to evaluation mode
-* add --resume to specify the model checkpoint to test.
+Run the following command to evaluate Uni-AdaFocus on the validation split of your dataset.
+* add --evaluate to turn to the evaluation mode
+* add --resume to specify the model checkpoint to evaluate
 
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py YOUR_DATA RGB \
