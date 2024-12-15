@@ -1,6 +1,8 @@
 # Uni-AdaFocus (TPAMI'24 & ICCV'21/CVPR'22/ECCV'22)
 
-This repo contains the official code and pre-trained models for "Uni-AdaFocus: Spatial-temporal Dynamic Computation for Video Recognition". Uni-AdaFocus is the latest version of the AdaFocus series.
+This repo contains the official code and pre-trained models for "Uni-AdaFocus: Spatial-temporal Dynamic Computation for Video Recognition". 
+
+Uni-AdaFocus is the latest version of the AdaFocus series.
 
 - [TPAMI 2024]
 [Uni-AdaFocus: Spatial-Temporal Dynamic Computation for Video Recognition]()
