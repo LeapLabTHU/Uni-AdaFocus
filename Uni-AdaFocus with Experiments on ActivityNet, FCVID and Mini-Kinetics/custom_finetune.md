@@ -2,7 +2,7 @@
 
 If you have a customized video classification dataset and would like to finetune Uni-AdaFocus on it, please follow this tutorial step-by-step.
 
-Let's begin with this folder [Uni-AdaFocus with Experiments on ActivityNet, FCVID and Mini-Kinetics](Uni-AdaFocus%20with%20Experiments%20on%20ActivityNet,%20FCVID%20and%20Mini-Kinetics).
+Let's begin with this folder [Uni-AdaFocus with Experiments on ActivityNet, FCVID and Mini-Kinetics](../Uni-AdaFocus%20with%20Experiments%20on%20ActivityNet,%20FCVID%20and%20Mini-Kinetics).
 
 ## Prepare dataset
 
