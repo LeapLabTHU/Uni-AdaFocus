@@ -34,6 +34,16 @@ Extensive experiments on seven benchmark datasets (i.e, ActivityNet, FCVID, Mini
 
 ## Get Started
 
+Setup environment:
+```bash
+conda create -n adafocus python=3.9
+conda activate adafocus
+conda install pytorch=1.12.1 torchvision=0.13.1 -c pytorch
+pip install numpy==1.26.0 tensorboardX
+# if you are trying Uni-AdaFocus-X3D, run the following line
+pip install iopath simplejson fvcore pytorchvideo psutil matplotlib opencv-python scipy pandas
+```
+
 For reproducing our experimental results, please go to following folders for specific instructions:
 * [Uni-AdaFocus with Experiments on ActivityNet, FCVID and Mini-Kinetics](Uni-AdaFocus%20with%20Experiments%20on%20ActivityNet,%20FCVID%20and%20Mini-Kinetics) 
 * [Uni-AdaFocus-TSM with Experiments on Sth-Sth V1&V2 and Jester](Uni-AdaFocus-TSM%20with%20Experiments%20on%20Sth-Sth%20V1&V2%20and%20Jester) 
