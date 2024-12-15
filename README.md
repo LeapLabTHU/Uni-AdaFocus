@@ -10,7 +10,7 @@ Uni-AdaFocus is the latest version of the AdaFocus series.
 [AdaFocus V3: On Unified Spatial-temporal Dynamic Video Recognition](https://arxiv.org/pdf/2209.13465.pdf)
 - [CVPR 2022]
 [AdaFocus V2: End-to-End Training of Spatial Dynamic Networks for Video Recognition](https://arxiv.org/pdf/2112.14238.pdf)
-- [ICCV 2021]
+- [ICCV 2021 **Oral**]
 [Adaptive Focus for Efficient Video Recognition](https://arxiv.org/pdf/2105.03245.pdf)
 
 
