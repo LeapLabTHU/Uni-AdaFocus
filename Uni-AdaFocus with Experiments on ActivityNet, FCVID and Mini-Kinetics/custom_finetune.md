@@ -62,11 +62,11 @@ dict_single = {'actnet': return_actnet, 'fcvid': return_fcvid, 'minik': return_m
 
 ## Start training
 
-Run following command to train Uni-AdaFocus on train split of your dataset.
+Run the following command to train Uni-AdaFocus on the train split of your dataset.
 
 * YOUR_DATA: your dataset name, same to above
 * PATH_TO_YOUR_DATASET: path to your dataset
-* LOG_DIR: path to the directory for saving exp results
+* LOG_DIR: path to the directory for saving experimental results
 
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port 12345 main.py \
@@ -82,9 +82,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 
 ## Start evaluating
 
-Run the following command to evaluate Uni-AdaFocus on valid split of your dataset.
-* add --evaluate to turn to evaluation mode
-* add --resume to specify the model checkpoint to test.
+Run the following command to evaluate Uni-AdaFocus on the validation split of your dataset.
+* add --evaluate to turn to the evaluation mode
+* add --resume to specify the model checkpoint to evaluate
 
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port 12345 main.py \
