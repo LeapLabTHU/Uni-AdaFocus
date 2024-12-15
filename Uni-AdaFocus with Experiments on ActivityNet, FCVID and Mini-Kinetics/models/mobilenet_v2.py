@@ -137,12 +137,7 @@ def mobilenet_v2(pretrained=True):
     model = MobileNetV2(width_mult=1)
 
     if pretrained:
-        try:
-            from torch.hub import load_state_dict_from_url
-        except ImportError:
-            from torch.utils.model_zoo import load_url as load_state_dict_from_url
-        state_dict = load_state_dict_from_url(
-            'https://drive.usercontent.google.com/u/0/uc?id=1DZ1X_Lw_obuYn5F2ZfiotB96UzS2T31a&export=download', progress=True)
+        state_dict = torch.load('../ckpt/mobilenetv2_1.0-f2a8633.pth.tar', map_location='cpu')
         model.load_state_dict(state_dict)
     return model
 
