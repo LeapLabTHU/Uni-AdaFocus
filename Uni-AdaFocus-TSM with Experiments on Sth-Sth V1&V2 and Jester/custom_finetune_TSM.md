@@ -49,7 +49,7 @@ def return_YOUR_DATA(modality):
         root_data = os.path.join(ROOT_DATASET, 'frames')
         filename_imglist_train = os.path.join(ROOT_DATASET, 'train_split.txt')
         filename_imglist_val = os.path.join(ROOT_DATASET, 'val_split.txt')
-        prefix = 'img_{:05d}.jpg'
+        prefix = 'image_{:05d}.jpg'
     else:
         print('no such modality:' + modality)
         raise NotImplementedError
