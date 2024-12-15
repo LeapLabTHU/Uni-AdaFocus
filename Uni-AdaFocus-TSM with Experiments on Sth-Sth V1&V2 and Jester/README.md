@@ -7,7 +7,7 @@
 - torchvision 0.13.1
 
 ## Datasets
-1. Please follow the instruction of [TSM](https://github.com/mit-han-lab/temporal-shift-module#data-preparation) to prepare the Something-Something V1/V2 and Jester datasets.
+1. Please follow the instructions of [TSM](https://github.com/mit-han-lab/temporal-shift-module#data-preparation) to prepare the Something-Something V1/V2 and Jester datasets.
 
 2. After preparation, please edit the "ROOT_DATASET" in `ops/dataset_config.py` to the correct path of the dataset.
 
