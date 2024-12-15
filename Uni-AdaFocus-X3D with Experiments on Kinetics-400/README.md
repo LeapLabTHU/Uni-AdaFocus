@@ -7,15 +7,15 @@
 - torchvision 0.13.1
 
 ## Datasets
-1. Please download [Kinetics 400](https://storage.googleapis.com/deepmind-media/Datasets/kinetics400.tar.gz)
+1. Please download [Kinetics 400](https://storage.googleapis.com/deepmind-media/Datasets/kinetics400.tar.gz).
 
-2. Please follow the instruction of [TSM](https://github.com/mit-han-lab/temporal-shift-module#data-preparation) to prepare the Kinetics-400 dataset.
+2. Please follow the instructions of [TSM](https://github.com/mit-han-lab/temporal-shift-module#data-preparation) to prepare the Kinetics-400 dataset.
 
 3. After preparation, please edit the "ROOT_DATASET" in `ops/dataset_config.py` to the correct path of the dataset.
 
 ## Training
 
-Firstly, prepare X3D pretrained models from [Google Drive](https://drive.google.com/drive/folders/1R5lfusmhY7OfqyM7bWw--x7nDeRB8zBE?usp=drive_link) and put them in the `archs/X3D_ckpt` folder.
+Firstly, download X3D pre-trained models from [Google Drive](https://drive.google.com/drive/folders/1R5lfusmhY7OfqyM7bWw--x7nDeRB8zBE?usp=drive_link) and put them in the `archs/X3D_ckpt` folder.
 Run the following command to train Uni-AdaFocus-X3D with patch_size = 128, glance_segments = 16, focus_segments = 32:
 
 ### Kinetics-400
