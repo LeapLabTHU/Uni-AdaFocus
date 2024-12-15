@@ -14,7 +14,7 @@
    - [FCVID](https://drive.google.com/drive/folders/1cPSc3neTQwvtSPiVcjVZrj0RvXrKY5xj)
    - [Mini-Kinetics](https://deepmind.com/research/open-source/kinetics). Please download [Kinetics 400](https://storage.googleapis.com/deepmind-media/Datasets/kinetics400.tar.gz) and select the 200 classes for minik.
 
-3. Extract frames using [ops/video_jpg.py](ops/video_jpg.py). Minor modifications on file path are needed when extracting frames from different dataset. You may also need to change dataset config in `dataset_config.py`  as well.
+3. Extract frames using [ops/video_jpg.py](ops/video_jpg.py). Minor modifications on file path are needed when extracting frames from different datasets. You may also need to change the dataset configs in `dataset_config.py`  as well.
 
 ## Training
 
