@@ -2,7 +2,7 @@
 
 If you have a customized video classification dataset and would like to finetune Uni-AdaFocus on it, please follow this tutorial step-by-step.
 
-Let's begin with this folder [Uni-AdaFocus-TSM with Experiments on Sth-Sth V1&V2 and Jester](Uni-AdaFocus-TSM%20with%20Experiments%20on%20Sth-Sth%20V1&V2%20and%20Jester).
+Let's begin with this folder [Uni-AdaFocus-TSM with Experiments on Sth-Sth V1&V2 and Jester](../Uni-AdaFocus-TSM%20with%20Experiments%20on%20Sth-Sth%20V1&V2%20and%20Jester).
 
 ## Prepare dataset
 
@@ -49,7 +49,7 @@ def return_YOUR_DATA(modality):
         root_data = os.path.join(ROOT_DATASET, 'frames')
         filename_imglist_train = os.path.join(ROOT_DATASET, 'train_split.txt')
         filename_imglist_val = os.path.join(ROOT_DATASET, 'val_split.txt')
-        prefix = 'image_{:05d}.jpg'
+        prefix = 'img_{:05d}.jpg'
     else:
         print('no such modality:' + modality)
         raise NotImplementedError
